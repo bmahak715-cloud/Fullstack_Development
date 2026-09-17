@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Horizontal Sticky Images</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+
+            overflow-x: auto;
+            overflow-y: hidden;
+
+            scroll-snap-type: x mandatory;
+        }
+
+        .box {
+            min-width: 100vw;
+            height: 100vh;
+
+            flex-shrink: 0;
+
+            position: sticky;
+            left: 0;
+
+            background-size: cover;
+            background-position: center;
+
+            scroll-snap-align: start;
+        }
+
+        #box1 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJCABCwiYyCmxHQ8u_J0q9_jazl3f2GA34kd4Jj7cwxw&s=10");
+        }
+
+        #box2 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsQqLqSXydsncz2x4kGkcGfy7OPmx2vRJPjcDXeOoANw&s=10");
+        }
+
+        #box3 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwPFj2DgMMIud3Af_26wWrByTjEzChXlUPMb6t3Dd5GQ&s=10");
+        }
+
+        #box4 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDLyilZYxhyqDp7FIcHW7eOGpnnd9WTkYAHo0qWPBPVA&s=10");
+        }
+
+        #box5 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT05HpKCs75TCwcuBlC8WEtaFgTqTciyJv2MqBzCJ4NsA&s=10");
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+        <div class="box" id="box5"></div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+        }
+        .container{
+            display: flex;
+            
+        }
+        .container>div{
+            color:aliceblue;
+            height: 100px;
+            align-content: center;
+            text-align: center;
+        }
+        #box1{
+            background-color: rgb(66, 255, 198);
+            /*Method 1 of giving flex properties like flex-grow, flex-shrink, flex-basis*/
+            flex-basis: 150px;/*the minimum width of the box*/
+            flex-grow: 2;/*the box will grow to fill the available space. Howwever much i grow it the larger portion will always be the first box in which it is divide into 2/4*/
+            flex-shrink: 1;/*if the value is 0 then
+        }
+        #box2{
+            
+            background-color: rgb(0, 255, 187);
+            /*Method 2 of giving flex properties like flex-grow, flex-shrink, flex-basis*/
+            flex:1 1 150px;/*flex-grow flex-shrink flex-basis*/
+        }
+        #box3{
+            flex-basis: 150px;
+            background-color: rgb(16, 176, 131);
+            flex-grow: 1;/*1/4 of the available space will be taken by this box*/
+            flex-shrink: 2;/*if i shrink the screen then the least space will be given the the third box which has max flex shrink.aGAR SPACE KAM HAI TOH KAUN SABSE JYADA SHRINK KAREGA-JISKI SABSE JYADA VALUE HOGI SHRINK ME */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="box1">Box 1</div>
+        <div id="box2">Box 2</div>
+        <div id="box3">Box 3</div>
+    </div>
+</body>
+</html>

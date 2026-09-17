@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .box{
+            width: 400px;
+            height: 400px;
+            background-color:white;
+            text-align: center;
+            border-radius: 15px;
+            color: rgb(0, 0, 0);
+            outline: 4px solid rgb(0, 0, 0);
+        }
+        input[type="text"]{
+             border-radius: 15px;
+            border-width: 0 0 3px 0 ;
+        }
+        input[type="password"]{
+            border-radius: 15px;
+            border-width: 0 0 3px 0 ;
+        }
+        button[type="submit"]{
+            background-color: rgb(48, 72, 253);
+            border-radius: 15px;
+            border-width: 0 0 3px 0 ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Task 1 - Create a Login Card</h2>
+            <form>
+                <h1>Login</h1>
+                <input type="text" placeholder="Username"><br><br>
+                <input type="password" placeholder="Password"><br><br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

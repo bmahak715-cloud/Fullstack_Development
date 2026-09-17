@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Circle</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #div1,#div3 {
+            height: 700px;
+            width: 400px;
+            margin: 0;
+            padding: 0;
+            border: 10px solid white
+        }
+
+        #div1 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHEPBVlDEWLjsUuaxkugzZshAgndXOgWo1ODHKd8ZVUw&s=10");
+            background-color: blue;
+            background-size: cover;
+            float: left;
+        }
+        h1{
+            /*shadow contains offset keft,offset right blur radius and color*/
+            box-shadow: 4px 4px 10px blue;
+            color:white;
+            text-shadow:2px 2px 4px 2px rgb(253, 253, 253) ,2px 2px 4px blue;
+            text-align: center;
+            font-size: 30 px;
+            
+        }
+        p{
+            color:white;
+            text-shadow:2px 2px 4px rgb(253, 253, 253) ,2px 2px 4px blue;
+            text-align: center;
+            font-size: 24px;
+        }
+        #div2 {
+            font-size: 24px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+        }
+
+        #div3 {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQca_aRrd_E6Qgh_Q1FneyHcPgLva3PSto9Vox-rqVobA&s=10");
+            background-size: cover;
+            float: right;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="div1"></div>
+        <div id="div3">Div3</div>
+            <h1>ANIME</h1>
+            <P>Anime is a style of hand-drawn or computer animation that originated in and is widely produced in Japan.
+                It features vibrant characters, distinct artwork (often including large eyes and dynamic hair), and
+                complex, serialized storytelling that spans every genre from romance to sci-fi.</P>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.dark{
+    @apply bg-white dark:bg-gray-800;
+}
+.heading {
+    @apply text-blue-400 text-4xl font-bold bg-white dark:bg-gray-800 text-center;
+}
+.img{
+    @apply w-100 h-100 m-10 items-center mask-radial-at-center;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section>h2{/*Providing the property direcly to the child of the section*/
+            color:rgb(85, 15, 176);
+        }
+        /* section h2{blue color will be overwritten and all the h2 tags will have aquamarine color */
+            /*color:brown*/
+        /*}*/
+        h2~p{/* all the p tag after h2 tag*/
+            color:seagreen;
+            font-size: 40px;
+        }
+        h2+p{/*direct sibling he h2 tag mean just next p tag after h2*/
+            color: rgb(66, 223, 129);
+            font-size: 35px;
+            text-shadow: 0 0 3px black;
+        } 
+    
+        h2{
+            color: chocolate;
+        }
+
+        /*Button tag*/
+        button{
+            color:white;
+            background-color:rgb(209, 198, 198);
+            border-width: 0px;
+            font-size: 40px;
+        }
+        button:hover{/*property appear while it is hovering on the button. for all elements*/
+            box-shadow:3px 3px 5px grey ;
+        }
+
+        button:active{/*on clicking the button the color and elements will change according to provided properties. for all elements*/
+            box-shadow: 0px 0px 0px;
+            background-color: bisque;
+        }
+
+        /* button:checked{/*it will not change the color because the button type is not checkbox*/
+            /* color:brown */
+        /* } */
+
+        button:focus{/*it works on all elemets*/
+            outline: 3px solid rgb(219, 219, 8)
+        }
+        /*Chcekbox type in input*/
+        input[type=checkbox]{
+            height:50px;
+            width:50px;
+        }
+
+        input:checked{
+            accent-color:crimson
+        }
+        /*Anchor tag*/
+        a{
+            font-size: 40px;
+        }
+        a:link{
+            color:darkslateblue
+        }
+        a:visited{
+            color:darkmagenta
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <h2>SELECTORS</h2>
+        <p>a single sentence or brief statement that stands alone on its own line to create emphasis, speed up pacing, or highlight a key point.</p>
+        <p>A one-line text is a single string or line of text that does not contain paragraph breaks or newlines. </p>
+        <div>
+            <h2>Pacing</h2>
+        </div>
+    </section>
+    <!--BUTTON TAG-->
+    <button>Click Here</button>
+    <button>Click Here</button>
+    <button>Click Here</button>
+    <button>Click Here</button>
+    <!--Checkbox-->
+    <input type="checkbox">
+    <!--anchor tag-->
+    <a href="https://chatgpt.com/c/6a8fae5e-7c10-83ee-a241-324b08cebccd" >Link</a>
+</body>
+</html>

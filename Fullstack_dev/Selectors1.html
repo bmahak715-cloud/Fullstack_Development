@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* priority
+        1. inline
+        2.id
+        3.class
+        4. element(tag) */
+        * {
+            /*-------> Universal(*)*/
+            margin: 0px;
+            padding: 0px
+        }
+
+        #myid {
+            /*-------> id(#)*/
+            color: red;
+        }
+
+        .myclass {
+            /*---------> Class(.) we can give same property to multiple elements through class by providing them the same class name */
+            color: pink;
+            text-shadow: 1px 1px 0px black;
+        }
+
+        h2 {
+            /*--------> Element(name only like h1, h2)*/
+            color: blue;
+        }
+
+        li {
+            font-size: 40px;
+        }
+
+        mytag {
+            /* we can make a class of any name ourselves and provide them any property*/
+            font-size: 20px;
+        }
+
+        input[type=email] {
+            border-radius: 15px;
+            border-width: 0 0 3px 0 ;
+            border-color: blueviolet;
+        }
+
+        input[type=password] {
+            border-radius: 15px;
+            border-width: 0 0 3px 0 ;
+            border-color: blueviolet;
+        }
+
+        li[data=null] {
+            background-color: rgb(113, 226, 60)
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Selectors</Sect>
+    </h2>
+    <mytag>by Mahak Bhatia</mytag>
+    <ul>
+        <li>Universal</li>
+        <li id="myid">Id</li>
+        <li class="myclass">Class</li>
+        <li>Element</li>
+        <li>Attribute</li>
+        <li>Combinator</li>
+        <li>Pseudo Class</li>
+        <li>Pseudo Element</li>
+    </ul>
+
+    <input type="email" placeholder="Email"><!--the text that appears inside the input box like enter your password-->
+    <input type="password" placeholder="Password">
+    
+</body>
+
+</html>

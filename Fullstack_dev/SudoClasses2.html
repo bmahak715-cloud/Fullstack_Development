@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo Classes</title>
+
+    <style>
+
+        /* :hover */
+        .hover-box:hover {
+            background-color: yellow;
+        }
+
+        /* :focus */
+        input:focus {
+            background-color: lightblue;
+            border: 3px solid blue;
+        }
+
+        /* :active */
+        button:active {
+            background-color: red;
+            color: white;
+        }
+
+        /* :visited */
+        a:visited {
+            color: purple;
+        }
+
+        /* :link */
+        a:link {
+            color: blue;
+        }
+
+        /* :first-child */
+        .list p:first-child {
+            color: red;
+        }
+
+        /* :last-child */
+        .list p:last-child {
+            color: green;
+        }
+
+        /* :nth-child() */
+        .list p:nth-child(2) {
+            background-color: lightgreen;
+        }
+
+        /* :nth-of-type() */
+        .list p:nth-of-type(3) {
+            background-color: orange;
+        }
+
+        /* :first-of-type */
+        .list p:first-of-type {
+            border-left: 5px solid red;
+        }
+
+        /* :last-of-type */
+        .list p:last-of-type {
+            border-right: 5px solid blue;
+        }
+
+        /* :only-child */
+        .only p:only-child {
+            background-color: pink;
+        }
+
+        /* :only-of-type */
+        .only-type p:only-of-type {
+            color: darkorange;
+        }
+
+        /* :empty */
+        .empty:empty {
+            height: 50px;
+            width: 200px;
+            background-color: black;
+        }
+
+        /* :checked */
+        input:checked {
+            accent-color: green;
+        }
+
+        /* :disabled */
+        input:disabled {
+            background-color: gray;
+        }
+
+        /* :enabled */
+        input:enabled {
+            border: 2px solid green;
+        }
+
+        /* :required */
+        input:required {
+            border-left: 5px solid red;
+        }
+
+        /* :optional */
+        input:optional {
+            border-left: 5px solid blue;
+        }
+
+        /* :valid */
+        input:valid {
+            background-color: lightgreen;
+        }
+
+        /* :invalid */
+        input:invalid {
+            background-color: lightpink;
+        }
+
+        /* :placeholder-shown */
+        input:placeholder-shown {
+            background-color: lightyellow;
+        }
+
+        /* :read-only */
+        input:read-only {
+            background-color: lightgray;
+        }
+
+        /* :read-write */
+        input:read-write {
+            border: 2px solid orange;
+        }
+
+        /* :not() */
+        .not-example p:not(.special) {
+            color: red;
+        }
+
+        /* :has() */
+        .has-example div:has(h1) {
+            background-color: red;
+        }
+
+        /* :is() */
+        .is-example :is(h1, h2) {
+            color: blue;
+        }
+
+        /* :where() */
+        .where-example :where(h1, h2) {
+            background-color: lightblue;
+        }
+
+        /* :not() + :has() */
+        .combine-example div:not(:has(h1)) {
+            background-color: aqua;
+        }
+
+        /* :is() + :has() */
+        .combine-example div:is(:has(h1), :has(h2)) {
+            border: 5px solid hotpink;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Pseudo Classes</h1>
+
+    <h2>:hover</h2>
+    <div class="hover-box">
+        Move mouse over me
+    </div>
+
+    <hr>
+
+    <h2>:focus</h2>
+    <input type="text" placeholder="Click here">
+
+    <hr>
+
+    <h2>:active</h2>
+    <button>Click Me</button>
+
+    <hr>
+
+    <h2>:link and :visited</h2>
+    <a href="https://www.google.com">Google</a>
+
+    <hr>
+
+    <h2>:first-child, :last-child, :nth-child</h2>
+
+    <div class="list">
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <p>Paragraph 4</p>
+    </div>
+
+    <hr>
+
+    <h2>:only-child</h2>
+
+    <div class="only">
+        <p>I am the only child.</p>
+    </div>
+
+    <hr>
+
+    <h2>:only-of-type</h2>
+
+    <div class="only-type">
+        <h3>Heading</h3>
+        <p>I am the only paragraph.</p>
+    </div>
+
+    <hr>
+
+    <h2>:empty</h2>
+
+    <div class="empty"></div>
+
+    <hr>
+
+    <h2>:checked</h2>
+
+    <input type="checkbox">
+    <label>HTML</label>
+
+    <br>
+
+    <input type="checkbox">
+    <label>CSS</label>
+
+    <hr>
+
+    <h2>:disabled and :enabled</h2>
+
+    <input type="text" placeholder="Enabled">
+
+    <br><br>
+
+    <input type="text" placeholder="Disabled" disabled>
+
+    <hr>
+
+    <h2>:required and :optional</h2>
+
+    <input type="text" placeholder="Required" required>
+
+    <br><br>
+
+    <input type="text" placeholder="Optional">
+
+    <hr>
+
+    <h2>:valid and :invalid</h2>
+
+    <input type="email" placeholder="Enter email" required>
+
+    <hr>
+
+    <h2>:placeholder-shown</h2>
+
+    <input type="text" placeholder="Type something">
+
+    <hr>
+
+    <h2>:read-only</h2>
+
+    <input type="text" value="Cannot edit" readonly>
+
+    <hr>
+
+    <h2>:not()</h2>
+
+    <div class="not-example">
+        <p class="special">Special paragraph</p>
+        <p>Normal paragraph</p>
+        <p>Another normal paragraph</p>
+    </div>
+
+    <hr>
+
+    <h2>:has()</h2>
+
+    <div class="has-example">
+
+        <div>
+            <h1>I have H1</h1>
+            <p>This div contains H1.</p>
+        </div>
+
+        <br>
+
+        <div>
+            <p>This div does not contain H1.</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <h2>:is()</h2>
+
+    <div class="is-example">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <p>Paragraph</p>
+    </div>
+
+    <hr>
+
+    <h2>:where()</h2>
+
+    <div class="where-example">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <p>Paragraph</p>
+    </div>
+
+    <hr>
+
+    <h2>:not() + :has()</h2>
+
+    <div class="combine-example">
+
+        <div>
+            <h1>Topic</h1>
+        </div>
+
+        <br>
+
+        <div>
+            <h2>Sub Topic</h2>
+        </div>
+
+        <br>
+
+        <div>
+            <p>No heading</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

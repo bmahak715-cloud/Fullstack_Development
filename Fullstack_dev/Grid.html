@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));/*columns width or 100px 100px*/
+            outline: 1px solid black;
+            grid-template-rows: 100px;/*rows height or 100px 100px*/
+            }
+        .container> div{
+            font-size: 16px;
+            outline: 1px solid black;
+        }
+        .container2{
+            display:grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            outline: 1px solid black;
+        }
+        .container2> div{
+            font-size: 16px;
+            outline: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div><br><br>
+    <div class="container2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>

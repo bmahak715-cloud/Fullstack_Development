@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* @rule is used to adjuct the size meaning how much should the minimum width of screen on which media property will apply on and max width.  */
+        body{
+            background-color: black;
+            color:lightblue
+        }
+
+        p{
+            font-size:40px
+        }
+
+        /* @media(min-width: 800px){/*minimum width 800 or usse bade px pe ye apply hoga*/
+            /* p{
+                font-size:  300px;
+            }
+        } */
+
+        /*@media(max-width: 800px){/*maximum width 1200px tak ye apply hogi */
+            /*p{
+                font-size:  800px;
+            }
+        } */
+
+        @media(min-width: 500px) and (max-width: 1000px){
+            p{
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>Hello World!</p>
+</body>
+</html>

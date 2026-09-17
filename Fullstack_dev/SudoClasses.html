@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+
+    <style>
+        
+        input {
+            font-size: 25px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        /* 1. :required
+           Selects inputs that have required attribute */
+        input:required {
+            border-color: red;
+        }
+
+        /* 2. :optional
+           Selects inputs that are NOT required */
+        input:optional {
+            border-color: green;
+        }
+
+        /* 3. :disabled
+           Selects disabled inputs */
+        input:disabled {
+            background-color: grey;
+        }
+
+        /* 4. :enabled
+           Selects inputs that are enabled */
+        input:enabled {
+            background-color: lightblue;
+        }
+
+        /* 5. :read-only
+           Selects inputs that cannot be edited */
+        input:read-only {
+            background-color: orange;
+        }
+
+        /* 6. :read-write
+           Selects inputs that can be edited */
+        input:read-write {
+            background-color: white
+        }
+
+        /* 7. :placeholder-shown
+           Applies while placeholder is visible */
+        input:placeholder-shown {
+            border-color: purple;
+        }
+
+        /* 8. :valid
+           Applies when input value satisfies its rules */
+        input:valid {
+            border-color: green;
+        }
+
+        /* 9. :invalid
+           Applies when input value does NOT satisfy its rules */
+        input:invalid {
+            border-color: red;
+        }
+
+        /* 10. :in-range
+           Applies when number is within min/max */
+        input:in-range {
+            border-color: green;
+        }
+
+        /* 11. :out-of-range
+           Applies when number is outside min/max */
+        input:out-of-range {
+            border-color: red;
+        }
+
+        input[type=checkbox]{
+            height:50px;
+            width:50px;
+        }
+
+        input:checked{
+            accent-color:crimson
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2> Required</h2>
+    <input type="text" placeholder="First Name" required>
+    <h2> Optional</h2>
+    <input type="text" placeholder="Middle Name">
+    <h2> Disabled</h2>
+    <input type="text" value="Cannot edit" disabled>
+    <h2> Enabled</h2>
+    <input type="text" placeholder="You can edit me">
+    <h2> Read Only</h2>
+    <input type="text" value="You cannot edit this" readonly>
+    <h2> Read Write</h2>
+    <input type="text" value="You can edit this">
+    <h2> Placeholder Shown</h2>
+    <input type="text" placeholder="Type something">
+    <h2>Valid / Invalid</h2>
+    <input type="email" placeholder="Enter email" required><br>
+    <input type="text" placeholder="Enter 5 characters" minlength="5" required>
+    <h2>In Range / Out of Range</h2>
+    <input type="number" min="10" max="50" placeholder="10 - 50">
+    <h2>checked in checkbox</h2>
+    <input type="checkbox" >
+
+</body>
+</html>

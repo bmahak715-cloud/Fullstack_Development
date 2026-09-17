@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Layer help in telling which layer has more priority if both are classes or parameter l ike p tags but properties are given two times.-->
+    <!-- priority will be given to whichever is written later -->
+    <style>
+        @layer special,base;
+        /*if this line is not written the if special is given after base then more priority will be given to special but because pf this line more priority will be given to base because base is written later. */
+        
+        @layer base {
+            .para {
+                color: red;
+            }
+        }
+
+        @layer special {
+            .highlight-para {
+                color: aqua;
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p class="para highlight-para">Hello, World!</p>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --primary-color: grey;
+            --text-size: 30px;
+        }
+
+        .container {
+            height: 500px;
+            width: 500px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            outline: 1px solid black;
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .container>div {
+            font-size: var(--text-size);
+            outline: 1px solid black;
+        }
+
+        .parent {
+            --primary-color: grey;
+            display: grid;
+            /*now the parent box is in grid form*/
+            background-color: blueviolet;
+            grid-template-columns: subgrid;
+            grid-template-rows: subgrid;
+            grid-column: 1/6;
+            /*column will be from 1 to 3. 3rd column not included.*/
+            grid-row: 1/6;
+            /*row will be from 1 to 3. 3rd column not included.*/
+        }
+
+        .child1 {
+            background-color: var(--primary-color);
+            color: white;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            
+        }
+        
+        /* .child2 {
+            background-color: pink;
+            color: white;
+            grid-column: 3/6;
+            grid-row: 3/6;
+        } */
+        .child3 {
+            background-color: lightblue;
+            color: white;
+            grid-column:3/4;
+            grid-row: 1/2;
+        }
+        /* .child4 {
+            background-color: lightgreen;
+            color: white;
+            grid-column: 5/6;
+            grid-row: 5/6;
+        }
+        .child5 {
+            background-color: rgb(166, 0, 28);
+            color: white;
+            grid-column: 6/6;
+            grid-row: 6/6;
+        }
+        .child6 {
+            background-color: rgb(228, 68, 95);
+            color: white;
+            grid-column: 6/6;
+            grid-row: 6/6;
+        }
+        .child7 {
+            background-color: rgb(166, 0, 28);
+            color: white;
+            grid-column: 6/6;
+            grid-row: 6/6;
+        }
+        .child8 {
+            background-color: rgb(39, 255, 57);
+            color: white;
+            grid-column: 6/6;
+            grid-row: 6/6;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="parent">
+            <div class="child1">
+                1
+            </div>
+            <div class="child2">
+                2
+                </div>
+            <div class="child3">
+                3
+            </div>
+            <div class="child4">
+                4
+            </div>
+            <div class="child5">
+                5
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

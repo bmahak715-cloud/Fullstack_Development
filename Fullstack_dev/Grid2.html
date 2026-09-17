@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:grid;
+            grid-template-areas:
+                "box1 box1 box1 box1 box2 box2"
+                "box1 box1 box1 box1 box2 box2"
+                "box1 box1 box1 box1 box2 box2" 
+                "box3 box3 box4 box4 box5 box5"
+                "box3 box3 box4 box4 box5 box5"
+                "box3 box3 box6 box6 box5 box5"
+                "box7 box7 box6 box6 box5 box5"
+                "box7 box7 box6 box6 box5 box5";
+                
+            outline: 1px solid black;
+        }
+        .container> div{
+            font-size: 30px;
+            outline: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px #0a0303;
+        }
+        #box1{
+            background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzVeN2YmK91eq2I__1lBxuLJmmc151WHG1idr-4zc-Ww&s=10');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #box2{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyQbr4JXkS3sNgvV1Prh0fUtyZ_q2wUjy4iZP3lLW_GA&s=10');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #box3{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkVexxzbg3jvRGCioSPljjTfsjn7CWC45h3L40QZwXjQ&s=10');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #box4{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbWqOzbQJ9hjWFVMi-FyH8Ib9mPDxJ7eZluBMuUl1xGw&s=10');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #box5{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2rqzKXE4L9dMxj6TTG6vj1SWKBSjnZbKgHRLcjMURNw&s=10');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #box6{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEQpD1Kn9lv45XLv-e9tIO3K6UgsxQkGPEyFftkOxp2Q&s=10');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #box7{
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIdzB0s_3yLtlPMjSEvfeVSViNXiUukAhzXLP-i_Re7A&s=10');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="grid-area:box1;" id="box1">1</div>
+        <div style="grid-area:box2;" id="box2">2</div>
+        <div style="grid-area:box3;" id="box3">3</div>
+        <div style="grid-area:box4;" id="box4">4</div>
+        <div style="grid-area:box5;" id="box5">5</div>
+        <div style="grid-area:box6;" id="box6">6</div>
+        <div style="grid-area:box7;" id="box7">7</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #386fc2;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 220px;
+        height: 100vh;
+        background: #1e293b;
+        color: white;
+        position: fixed;
+        padding-top: 20px;
+    }
+
+    .sidebar h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .sidebar a {
+        display: block;
+        padding: 12px 20px;
+        color: #cbd5e1;
+        text-decoration: none;
+    }
+
+    .sidebar a:hover, .sidebar a.active {
+        background: #3b82f6;
+        color: white;
+    }
+
+    /* Main Content */
+    .main {
+        margin-left: 220px;
+        padding: 20px;
+    }
+
+    .header {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    /* Stats Cards */
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+        margin: 0;
+        font-size: 14px;
+        color: gray;
+    }
+
+    .card p {
+        font-size: 20px;
+        margin: 5px 0;
+        font-weight: bold;
+    }
+
+    /* Table */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+    }
+
+    th {
+        background: #f1f5f9;
+    }
+
+    tr:nth-child(even) {
+        background: #f9fafb;
+    }
+
+    .status {
+        padding: 5px 10px;
+        border-radius: 12px;
+        color: white;
+        font-size: 12px;
+    }
+
+    .green { background: #22c55e; }
+    .yellow { background: #eab308; }
+    .red { background: #ef4444; }
+
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Dashboard</h2>
+    <a class="active">Dashboard</a>
+    <a>Bookings</a>
+    <a>Users</a>
+    <a>Reports</a>
+    <a>Settings</a>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+    <div class="header">Dashboard Overview</div>
+
+    <!-- Cards -->
+    <div class="cards">
+        <div class="card">
+            <h3>Users</h3>
+            <p>125</p>
+        </div>
+        <div class="card">
+            <h3>Sales</h3>
+            <p>56</p>
+        </div>
+        <div class="card">
+            <h3>Orders</h3>
+            <p>75</p>
+        </div>
+        <div class="card">
+            <h3>Revenue</h3>
+            <p>$25,600</p>
+        </div>
+    </div>
+
+    <!-- Table -->
+    <table>
+        <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Item</th>
+            <th>Status</th>
+            <th>Price</th>
+        </tr>
+
+        <tr>
+            <td>#1001</td>
+            <td>John</td>
+            <td>Laptop</td>
+            <td><span class="status green">Delivered</span></td>
+            <td>$1200</td>
+        </tr>
+
+        <tr>
+            <td>#1002</td>
+            <td>Emma</td>
+            <td>Phone</td>
+            <td><span class="status yellow">Pending</span></td>
+            <td>$800</td>
+        </tr>
+
+        <tr>
+            <td>#1003</td>
+            <td>Alex</td>
+            <td>Tablet</td>
+            <td><span class="status red">Cancelled</span></td>
+            <td>$400</td>
+        </tr>
+
+    </table>
+</div>
+
+</body>
+</html>
