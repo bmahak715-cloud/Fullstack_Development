@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Over Cricket Game</title>
+    <scrpt src="WeeklyTask2.js"></scrpt>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #102a20;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .game {
+            width: 85%;
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: #1d4635;
+            border-radius: 15px;
+        }
+        h1 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        .difficulty {
+            margin: 20px;
+        }
+        select {
+            padding: 8px;
+            border-radius: 5px;
+        }
+        /* Scoreboard */
+        .scoreboard {
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+            margin: 25px 0;
+        }
+        .scoreboard div {
+            background-color: #285c45;
+            padding: 15px;
+            border-radius: 10px;
+            flex: 1;
+        }
+        .scoreboard h3 {
+            font-size: 14px;
+        }
+        .scoreboard p {
+            font-size: 25px;
+            color: #ffd700;
+            margin-top: 8px;
+        }
+        /* Cricket Pitch */
+        .pitch {
+            height: 150px;
+            background-color: #85b85c;
+            border: 5px solid white;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            margin: 30px 0;
+        }
+        #ball {
+            height: 18px;
+            width: 18px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 65px;
+            left: 5%;
+
+            display: none;
+        }
+        .stumps {
+            position: absolute;
+            right: 5%;
+            top: 45px;
+            font-size: 35px;
+            color: white;
+        }
+        .batter {
+            position: absolute;
+            left: 75%;
+            top: 50px;
+            font-size: 35px;
+        }
+        /* Buttons */
+        .buttons {
+            margin: 20px;
+        }
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            cursor: pointer;
+            background-color: #ffd700;
+            color: black;
+            font-weight: bold;
+        }
+        button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+        #hitBtn {
+            background-color: #ff7043;
+            color: white;
+        }
+        /* Commentary */
+        #commentary {
+            margin: 20px;
+            color: #ffd700;
+        }
+        #result {
+            margin-top: 20px;
+            color: #ffd700;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="game">
+        <h1>🏏 Last Over</h1>
+        <p>Score 12 runs in 6 balls to win!</p>
+        <!-- Difficulty -->
+        <div class="difficulty">
+            <label>Select Difficulty:</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+        <!-- Scoreboard -->
+        <div class="scoreboard">
+            <div>
+                <h3>Runs</h3>
+                <p id="runs">0</p>
+            </div>
+            <div>
+                <h3>Runs Needed</h3>
+                <p id="needed">12</p>
+            </div>
+            <div>
+                <h3>Balls Left</h3>
+                <p id="balls">6</p>
+            </div>
+            <div>
+                <h3>Wickets</h3>
+                <p id="wickets">0</p>
+            </div>
+        </div>
+        <!-- Cricket Pitch -->
+        <div class="pitch">
+            <div class="stumps">|||</div>
+            <div id="ball"></div>
+            <div class="batter">🏏</div>
+        </div>
+        <!-- Buttons -->
+        <div class="buttons">
+            <button id="startBtn">Start Game</button>
+            <button id="hitBtn" disabled>HIT!</button>
+        </div>
+        <!-- Commentary -->
+        <h3 id="commentary">Press Start Game to begin!</h3>
+        <!-- Best Score -->
+        <p>Best Score: <span id="bestScore">0</span></p>
+        <!-- Result -->
+        <h2 id="result"></h2>
+    </div>
+</body>
+
+</html>

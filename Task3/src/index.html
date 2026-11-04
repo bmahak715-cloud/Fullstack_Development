@@ -1,0 +1,446 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+
+<body class="bg-slate-100 text-slate-600">
+
+<div class="flex">
+
+    <!-- Sidebar -->
+
+    <aside class="hidden md:flex flex-col bg-slate-900 text-slate-300 w-60 min-h-screen p-5 sticky top-0">
+
+        <h1 class="text-2xl font-bold text-white mb-10">
+            AdminPanel
+        </h1>
+
+        <a href="#" class="bg-indigo-600 text-white p-3 rounded-lg mb-3">
+            🏠 Dashboard
+        </a>
+
+        <a href="#" class="p-3 hover:bg-slate-800 rounded-lg">
+            📊 Analytics
+        </a>
+
+        <a href="#" class="p-3 hover:bg-slate-800 rounded-lg">
+            👥 Users
+        </a>
+
+        <a href="#" class="p-3 hover:bg-slate-800 rounded-lg">
+            📦 Orders
+        </a>
+
+        <a href="#" class="p-3 hover:bg-slate-800 rounded-lg">
+            ⚙ Settings
+        </a>
+
+    </aside>
+
+
+    <!-- Main Content -->
+
+    <main class="flex-1 min-w-0">
+
+        <!-- Header -->
+
+        <header class="bg-white h-16 px-4 md:px-8 flex justify-between items-center border-b">
+
+            <div class="flex items-center gap-4">
+
+                <button class="md:hidden text-xl">
+                    ☰
+                </button>
+
+                <h2 class="text-xl font-bold text-slate-900">
+                    Dashboard
+                </h2>
+
+            </div>
+
+            <div class="flex items-center gap-4">
+
+                <input type="text" placeholder="Search..."
+                    class="hidden sm:block border rounded-lg px-3 py-2">
+
+                <span>🔔</span>
+
+                <span class="font-medium text-slate-900">
+                    Admin
+                </span>
+
+            </div>
+
+        </header>
+
+
+        <!-- Dashboard Content -->
+
+        <div class="p-4 md:p-8">
+
+            <h1 class="text-2xl font-bold text-slate-900">
+                Welcome Back!
+            </h1>
+
+            <p class="mt-2">
+                Here is your business overview.
+            </p>
+
+
+            <!-- Statistics Cards -->
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+
+                <div class="bg-white p-5 rounded-xl border">
+
+                    <p class="text-sm">Total Revenue</p>
+
+                    <h2 class="text-3xl font-bold text-slate-900 mt-3">
+                        ₹45,890
+                    </h2>
+
+                    <p class="text-green-600 text-sm mt-2">
+                        ↑ 12.5%
+                    </p>
+
+                </div>
+
+
+                <div class="bg-white p-5 rounded-xl border">
+
+                    <p class="text-sm">Total Users</p>
+
+                    <h2 class="text-3xl font-bold text-slate-900 mt-3">
+                        2,450
+                    </h2>
+
+                    <p class="text-green-600 text-sm mt-2">
+                        ↑ 8.2%
+                    </p>
+
+                </div>
+
+
+                <div class="bg-white p-5 rounded-xl border">
+
+                    <p class="text-sm">Total Orders</p>
+
+                    <h2 class="text-3xl font-bold text-slate-900 mt-3">
+                        1,240
+                    </h2>
+
+                    <p class="text-green-600 text-sm mt-2">
+                        ↑ 15.4%
+                    </p>
+
+                </div>
+
+
+                <div class="bg-white p-5 rounded-xl border">
+
+                    <p class="text-sm">Pending Orders</p>
+
+                    <h2 class="text-3xl font-bold text-slate-900 mt-3">
+                        85
+                    </h2>
+
+                    <p class="text-red-600 text-sm mt-2">
+                        ↓ 3.2%
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Revenue and Recent Orders -->
+
+            <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 mt-8">
+
+
+                <!-- Revenue Overview -->
+
+                <div class="bg-white border rounded-xl p-5">
+
+                    <h2 class="text-base font-semibold text-slate-900">
+                        Revenue Overview
+                    </h2>
+
+                    <p class="text-sm mt-2">
+                        Monthly Revenue
+                    </p>
+
+                    <div class="flex items-end justify-around h-56 mt-6 border-b">
+
+                        <div class="bg-indigo-500 w-8 h-24 rounded-t"></div>
+
+                        <div class="bg-indigo-500 w-8 h-32 rounded-t"></div>
+
+                        <div class="bg-indigo-500 w-8 h-20 rounded-t"></div>
+
+                        <div class="bg-indigo-500 w-8 h-40 rounded-t"></div>
+
+                        <div class="bg-indigo-500 w-8 h-28 rounded-t"></div>
+
+                        <div class="bg-indigo-500 w-8 h-48 rounded-t"></div>
+
+                    </div>
+
+                    <div class="flex justify-around text-xs mt-3">
+
+                        <span>Jan</span>
+                        <span>Feb</span>
+                        <span>Mar</span>
+                        <span>Apr</span>
+                        <span>May</span>
+                        <span>Jun</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Recent Orders -->
+
+                <div class="bg-white border rounded-xl p-5">
+
+                    <h2 class="text-base font-semibold text-slate-900">
+                        Recent Orders
+                    </h2>
+
+                    <div class="mt-5 space-y-5">
+
+                        <div class="flex justify-between">
+
+                            <div>
+                                <p class="font-medium text-slate-900">
+                                    Order #101
+                                </p>
+
+                                <p class="text-sm">
+                                    Rahul Sharma
+                                </p>
+                            </div>
+
+                            <span class="text-green-600 text-sm">
+                                Paid
+                            </span>
+
+                        </div>
+
+
+                        <div class="flex justify-between">
+
+                            <div>
+                                <p class="font-medium text-slate-900">
+                                    Order #102
+                                </p>
+
+                                <p class="text-sm">
+                                    Priya Singh
+                                </p>
+                            </div>
+
+                            <span class="text-yellow-600 text-sm">
+                                Pending
+                            </span>
+
+                        </div>
+
+
+                        <div class="flex justify-between">
+
+                            <div>
+                                <p class="font-medium text-slate-900">
+                                    Order #103
+                                </p>
+
+                                <p class="text-sm">
+                                    Aman Verma
+                                </p>
+                            </div>
+
+                            <span class="text-green-600 text-sm">
+                                Paid
+                            </span>
+
+                        </div>
+
+
+                        <div class="flex justify-between">
+
+                            <div>
+                                <p class="font-medium text-slate-900">
+                                    Order #104
+                                </p>
+
+                                <p class="text-sm">
+                                    Neha Gupta
+                                </p>
+                            </div>
+
+                            <span class="text-red-600 text-sm">
+                                Failed
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Traffic Sources and Top Products -->
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
+
+
+                <!-- Traffic Sources -->
+
+                <div class="bg-white border rounded-xl p-5">
+
+                    <h2 class="text-base font-semibold text-slate-900">
+                        Traffic Sources
+                    </h2>
+
+                    <div class="mt-6 space-y-5">
+
+
+                        <div>
+
+                            <div class="flex justify-between text-sm">
+
+                                <span>Direct</span>
+
+                                <span>45%</span>
+
+                            </div>
+
+                            <div class="bg-slate-100 h-3 rounded-full mt-2">
+
+                                <div class="bg-indigo-600 h-3 w-[45%] rounded-full"></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="flex justify-between text-sm">
+
+                                <span>Social Media</span>
+
+                                <span>30%</span>
+
+                            </div>
+
+                            <div class="bg-slate-100 h-3 rounded-full mt-2">
+
+                                <div class="bg-green-500 h-3 w-[30%] rounded-full"></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="flex justify-between text-sm">
+
+                                <span>Search Engine</span>
+
+                                <span>25%</span>
+
+                            </div>
+
+                            <div class="bg-slate-100 h-3 rounded-full mt-2">
+
+                                <div class="bg-orange-500 h-3 w-[25%] rounded-full"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Top Products -->
+
+                <div class="bg-white border rounded-xl p-5">
+
+                    <h2 class="text-base font-semibold text-slate-900">
+                        Top Products
+                    </h2>
+
+                    <div class="mt-5 space-y-4">
+
+                        <div class="flex justify-between border-b pb-3">
+
+                            <span>Laptop</span>
+
+                            <span class="font-medium text-slate-900">
+                                ₹45,000
+                            </span>
+
+                        </div>
+
+
+                        <div class="flex justify-between border-b pb-3">
+
+                            <span>Smartphone</span>
+
+                            <span class="font-medium text-slate-900">
+                                ₹32,000
+                            </span>
+
+                        </div>
+
+
+                        <div class="flex justify-between border-b pb-3">
+
+                            <span>Headphones</span>
+
+                            <span class="font-medium text-slate-900">
+                                ₹12,500
+                            </span>
+
+                        </div>
+
+
+                        <div class="flex justify-between">
+
+                            <span>Smart Watch</span>
+
+                            <span class="font-medium text-slate-900">
+                                ₹8,000
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
+```
