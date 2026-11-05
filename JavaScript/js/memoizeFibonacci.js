@@ -1,0 +1,20 @@
+function fibonacci(fn){
+    const cache = {};
+    return function fib(n){
+        const key = n;
+        if(cache[key]){
+            console.log('Fetching from cache');
+            return cache[key];
+        }
+        const result = n*fn(n-1);
+        cache[key] = result;
+        return result;
+    }
+}
+const fib = fibonacci(function(n){
+    if(n <= 0){
+        return 1;
+    }
+    return fib(n-1)+fib(n-2);
+});
+console.log(fib(5));                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

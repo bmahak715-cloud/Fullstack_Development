@@ -3,7 +3,7 @@ function outer(){
     function inner(){
         console.log(a);
     }
-    return inner();
+    inner();
 }
 outer();
 
