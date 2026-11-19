@@ -13,15 +13,12 @@ function manageClosure(){
         c++;
         console.log(c);
     }
-    function decrement(){
-        c--;
-        console.log(c);
-    }
+    
     return {
-        increment: increment,
-        decrement: decrement
-    };
+        increment};
 }
 const a = manageClosure();
 a.increment();
-a.decrement();
+a.increment();
+a.increment();
+a.increment();
